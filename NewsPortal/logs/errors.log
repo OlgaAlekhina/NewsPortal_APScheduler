@@ -1,0 +1,678 @@
+2022-02-17 17:09:15,948 ERROR Internal Server Error: /accounts/login/ C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645106988-vWgCj4tTJ7-9mIefGIE'), <traceback object at 0x000002445C321500>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\debug.py", line 90, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 146, in dispatch
+    return super(LoginView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 74, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 102, in post
+    response = self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 159, in form_valid
+    return form.login(self.request, redirect_url=success_url)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\forms.py", line 196, in login
+    ret = perform_login(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\utils.py", line 175, in perform_login
+    send_email_confirmation(request, user, signup=signup, email=email)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\utils.py", line 346, in send_email_confirmation
+    email_address.send_confirmation(request, signup=signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\models.py", line 62, in send_confirmation
+    confirmation.send(request, signup=signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\models.py", line 169, in send
+    get_adapter(request).send_confirmation_mail(request, self, signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\adapter.py", line 464, in send_confirmation_mail
+    self.send_mail(email_template, emailconfirmation.email_address.email, ctx)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\adapter.py", line 136, in send_mail
+    msg.send()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 743, in login
+    raise last_exception
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645106988-vWgCj4tTJ7-9mIefGIE')
+2022-02-17 17:09:15,951 ERROR "POST /accounts/login/ HTTP/1.1" 500 165645 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-17 17:13:45,710 ERROR Internal Server Error: /accounts/login/ C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645107258-rjgiFwWkWs-EIHKxPmd'), <traceback object at 0x000002445C263AC0>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\debug.py", line 90, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 146, in dispatch
+    return super(LoginView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 74, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 102, in post
+    response = self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 159, in form_valid
+    return form.login(self.request, redirect_url=success_url)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\forms.py", line 196, in login
+    ret = perform_login(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\utils.py", line 175, in perform_login
+    send_email_confirmation(request, user, signup=signup, email=email)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\utils.py", line 346, in send_email_confirmation
+    email_address.send_confirmation(request, signup=signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\models.py", line 62, in send_confirmation
+    confirmation.send(request, signup=signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\models.py", line 169, in send
+    get_adapter(request).send_confirmation_mail(request, self, signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\adapter.py", line 464, in send_confirmation_mail
+    self.send_mail(email_template, emailconfirmation.email_address.email, ctx)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\adapter.py", line 136, in send_mail
+    msg.send()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 743, in login
+    raise last_exception
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645107258-rjgiFwWkWs-EIHKxPmd')
+2022-02-17 17:13:45,711 ERROR "POST /accounts/login/ HTTP/1.1" 500 165645 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-17 17:14:52,589 ERROR Internal Server Error: /accounts/login/ C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645107325-1L2Mz0TS7D-FOJmmjix'), <traceback object at 0x000002445C4380C0>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\debug.py", line 90, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 146, in dispatch
+    return super(LoginView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 74, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 102, in post
+    response = self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\views.py", line 159, in form_valid
+    return form.login(self.request, redirect_url=success_url)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\forms.py", line 196, in login
+    ret = perform_login(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\utils.py", line 175, in perform_login
+    send_email_confirmation(request, user, signup=signup, email=email)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\utils.py", line 346, in send_email_confirmation
+    email_address.send_confirmation(request, signup=signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\models.py", line 62, in send_confirmation
+    confirmation.send(request, signup=signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\models.py", line 169, in send
+    get_adapter(request).send_confirmation_mail(request, self, signup)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\adapter.py", line 464, in send_confirmation_mail
+    self.send_mail(email_template, emailconfirmation.email_address.email, ctx)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\allauth\account\adapter.py", line 136, in send_mail
+    msg.send()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 743, in login
+    raise last_exception
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645107325-1L2Mz0TS7D-FOJmmjix')
+2022-02-17 17:14:52,590 ERROR "POST /accounts/login/ HTTP/1.1" 500 165645 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-17 18:01:27,987 ERROR Internal Server Error: /news/add C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'smtplib.SMTPAuthenticationError'>, SMTPAuthenticationError(535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645110120-ymNtGozjRQ-20HC8Qtr'), <traceback object at 0x000001C6A6D93580>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 174, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 467, in save
+    self._save_m2m()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 449, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related.py", line 1695, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1014, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 949, in add
+    self._add_items(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1158, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 23, in notify_subscribers
+    msg.send()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\mail\backends\smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 743, in login
+    raise last_exception
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 732, in login
+    (code, resp) = self.auth(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\smtplib.py", line 655, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Error: authentication failed: This user does not have access rights to this service 1645110120-ymNtGozjRQ-20HC8Qtr')
+2022-02-17 18:01:27,990 ERROR "POST /news/add HTTP/1.1" 500 170659 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 14:07:47,369 ERROR Internal Server Error: /news/add C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'function' object has no attribute 'getLogger'"), <traceback object at 0x0000029763EDAB80>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 174, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 466, in save
+    self.instance.save()
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\models.py", line 84, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 743, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 791, in save_base
+    post_save.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 25, in logging
+    logger = logging.getLogger('news.views')
+AttributeError: 'function' object has no attribute 'getLogger'
+2022-02-18 14:07:47,372 ERROR "POST /news/add HTTP/1.1" 500 127827 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 14:08:57,948 ERROR Internal Server Error: /news/add C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'function' object has no attribute 'getLogger'"), <traceback object at 0x000001D8D2F03B00>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 174, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 466, in save
+    self.instance.save()
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\models.py", line 84, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 743, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 791, in save_base
+    post_save.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 26, in logging
+    logger = logging.getLogger('news.views')
+AttributeError: 'function' object has no attribute 'getLogger'
+2022-02-18 14:08:57,954 ERROR "POST /news/add HTTP/1.1" 500 127827 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 14:09:06,563 ERROR Internal Server Error: /news/add C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'function' object has no attribute 'getLogger'"), <traceback object at 0x000001D8CE5F3200>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 174, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 466, in save
+    self.instance.save()
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\models.py", line 84, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 743, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 791, in save_base
+    post_save.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 26, in logging
+    logger = logging.getLogger('news.views')
+AttributeError: 'function' object has no attribute 'getLogger'
+2022-02-18 14:09:06,563 ERROR "POST /news/add HTTP/1.1" 500 127827 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 14:12:27,563 ERROR Internal Server Error: /news/24/edit C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'function' object has no attribute 'getLogger'"), <traceback object at 0x000001D8D2D26E80>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 196, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 466, in save
+    self.instance.save()
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\models.py", line 84, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 743, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 791, in save_base
+    post_save.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 26, in logging
+    logger = logging.getLogger('news.views')
+AttributeError: 'function' object has no attribute 'getLogger'
+2022-02-18 14:12:27,564 ERROR "POST /news/24/edit HTTP/1.1" 500 127965 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 14:18:03,935 ERROR Internal Server Error: /news/24/edit C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.'), <traceback object at 0x000001ECA521BA40>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 607, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\retry.py", line 45, in call_with_retry
+    return do()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 608, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 641, in _connect
+    for res in socket.getaddrinfo(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 119, in reconnect_on_error
+    yield
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\client.py", line 1530, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\client.py", line 1371, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 1370, in get_connection
+    connection.connect()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 613, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 607, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\retry.py", line 45, in call_with_retry
+    return do()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 608, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 641, in _connect
+    for res in socket.getaddrinfo(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\kombu\connection.py", line 447, in _reraise_as_library_errors
+    yield
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 376, in ensure
+    return retry_over_time(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\commands\core.py", line 1404, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\client.py", line 1173, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 1370, in get_connection
+    connection.connect()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 613, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 196, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 467, in save
+    self._save_m2m()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 449, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related.py", line 1695, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1014, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 949, in add
+    self._add_items(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1158, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 22, in notify_subscribers
+    news_mail.delay(subject, from_email, recipients, html_content)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\kombu\connection.py", line 451, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.
+2022-02-18 14:18:03,941 ERROR "POST /news/24/edit HTTP/1.1" 500 327596 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 14:19:16,434 ERROR Internal Server Error: /news/add C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'function' object has no attribute 'getLogger'"), <traceback object at 0x000001ECA5498840>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 174, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 466, in save
+    self.instance.save()
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\models.py", line 84, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 743, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 791, in save_base
+    post_save.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 28, in logging
+    logger = logging.getLogger('news.views')
+AttributeError: 'function' object has no attribute 'getLogger'
+2022-02-18 14:19:16,436 ERROR "POST /news/add HTTP/1.1" 500 127460 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 14:21:04,901 ERROR Internal Server Error: /news/add C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'kombu.exceptions.OperationalError'>, OperationalError('Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.'), <traceback object at 0x000002371415CF40>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 607, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\retry.py", line 45, in call_with_retry
+    return do()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 608, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 641, in _connect
+    for res in socket.getaddrinfo(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 119, in reconnect_on_error
+    yield
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\client.py", line 1530, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\client.py", line 1371, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 1370, in get_connection
+    connection.connect()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 613, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 607, in connect
+    sock = self.retry.call_with_retry(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\retry.py", line 45, in call_with_retry
+    return do()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 608, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 641, in _connect
+    for res in socket.getaddrinfo(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\kombu\connection.py", line 447, in _reraise_as_library_errors
+    yield
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 376, in ensure
+    return retry_over_time(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\backends\redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\commands\core.py", line 1404, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\client.py", line 1173, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 1370, in get_connection
+    connection.connect()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\redis\connection.py", line 613, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\mixins.py", line 104, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 174, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 144, in post
+    return self.form_valid(form)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\generic\edit.py", line 127, in form_valid
+    self.object = form.save()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 467, in save
+    self._save_m2m()
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 449, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related.py", line 1695, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1014, in set
+    self.add(*new_objs, through_defaults=through_defaults)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 949, in add
+    self._add_items(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\related_descriptors.py", line 1158, in _add_items
+    signals.m2m_changed.send(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 170, in send
+    return [
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\dispatch\dispatcher.py", line 171, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\alekhina_om\Documents\Python\NewsPortal_module11\NewsPortal_module11\NewsPortal\news\signals.py", line 23, in notify_subscribers
+    news_mail.delay(subject, from_email, recipients, html_content)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\kombu\connection.py", line 451, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 11001 connecting to  redis-15623.c294.ap-northeast-1-2.ec2.cloud.redislabs.com:15623. getaddrinfo failed.
+2022-02-18 14:21:04,907 ERROR "POST /news/add HTTP/1.1" 500 327425 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None
+2022-02-18 16:50:54,793 ERROR Internal Server Error: /admin/news/author/ C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\log.py (<class 'django.core.exceptions.FieldError'>, FieldError('Related Field got invalid lookup: icontains'), <traceback object at 0x0000027E31DA3780>)
+Traceback (most recent call last):
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 622, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\sites.py", line 236, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1710, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 742, in get_changelist_instance
+    return ChangeList(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\views\main.py", line 100, in __init__
+    self.queryset = self.get_queryset(request)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\views\main.py", line 486, in get_queryset
+    qs, search_may_have_duplicates = self.model_admin.get_search_results(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1041, in get_search_results
+    queryset = queryset.filter(or_queries)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1329, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\query.py", line 1171, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+2022-02-18 16:50:54,796 ERROR "GET /admin/news/author/?q=Ivanov HTTP/1.1" 500 170894 C:\Users\alekhina_om\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\servers\basehttp.py None

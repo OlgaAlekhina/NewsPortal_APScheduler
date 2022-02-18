@@ -1,0 +1,96 @@
+{% extends 'default.html' %}
+
+{% load custom_filters %}
+ 
+{% block title %}
+News
+{% endblock title %}
+ 
+{% block content %}
+
+<h1>Все новости</h1>
+Количество статей: {{ news|length }}
+ <hr>
+    {% if news %}
+        <table>
+            <tr>
+                <td>
+                    Заголовок
+                </td>
+                <td>
+                    Дата публикации
+                </td>
+                <td>
+                    Категория
+                </td>
+                <td>
+                    Текст статьи
+                </td>
+            </tr>
+        {% for new in news %}
+            <tr>
+                 <td>
+                    <a href="{% url 'news_detail' new.id %}">{{ new.post_title|censor }}</a>
+                    <a href="{% url 'news_edit' new.id %}"><u>Редактировать</u></a>
+
+                    <a href="{% url 'news_delete' new.id %}"><u>Удалить</u></a>
+                 </td>
+                <td>
+                    {{ new.post_time|date:'d-M-Y H:i' }}
+                </td>
+                <td>
+                    {% for cat in new.categories.all %}
+                        <a href="{% url 'post-category' cat.id %}">{{ cat.name|title }}</a>
+                    {% endfor %}
+                </td>
+                <td>
+                   {{ new.post_text|truncatechars:50|censor }}
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <h2>Новостей нет!</h2>
+    {% endif %}
+<hr>
+
+ <button><a href="{% url 'news_create' %}"><u>Добавить новость</u></a></button>
+
+ <button><a href="{% url 'news_search' %}"><u>Поиск новостей</u></a></button>
+
+ <button><a href="{% url 'user_page' %}"><u>В личный кабинет</u></a></button>
+
+    {% if user.is_authenticated %}
+        <button> <a href="{% url 'account_logout' %}">Выйти</a> </button>
+    {% else %}
+        <button> <a href="{% url 'account_login' %}">Войти</a> </button>
+    {% endif %}
+
+<hr>
+    {% for cat in category_list %}
+        <p><a href="{% url 'post-category' cat.id %}">{{ cat.name|title }}</a></p>
+    {% endfor %}
+
+    {% if is_paginated %}
+
+    {% if page_obj.has_previous %}
+        <a href="?page=1">First</a>
+        <a href="?page={{ page_obj.previous_page_number }}"><<<</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+            <a>{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">>>></a>
+    <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+
+{% endif %}
+
+{% endblock content %}
